@@ -5,6 +5,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicmljODgiLCJhIjoiY2xnemlvY2NtMDAzbzNlb2kyZ2p2a
 let mapData;
 let mapMarkers = [];
 let migrationLines = [];
+let activePopup = null;
 
 // Layer visibility state
 let layerFilters = {
@@ -115,12 +116,20 @@ function addMapEvents(data) {
     const popup = new mapboxgl.Popup({
       offset: 14,
       closeButton: true,
-      closeOnClick: false
+      closeOnClick: true
     }).setHTML(`
       <div class="popup-title">${e.personName}</div>
       <div class="popup-event">${e.label}${e.year ? ' — ' + e.year : ''}</div>
       <div class="popup-event">${e.place}</div>
     `);
+
+    // Close previous popup when opening a new one
+    popup.on('open', () => {
+      if (activePopup && activePopup !== popup) {
+        activePopup.remove();
+      }
+      activePopup = popup;
+    });
 
     const marker = new mapboxgl.Marker({ element: el })
       .setLngLat([e.coords.lng, e.coords.lat])
