@@ -91,7 +91,7 @@ function renderTimelinePeriods() {
   const container = document.getElementById('timeline-periods');
   if (!container) return;
 
-  const minYear = 1794;
+  const minYear = 1757;
   const maxYear = 2023;
   const range = maxYear - minYear;
 

@@ -4,7 +4,7 @@
       "id": "AA1",
       "name": "Juan Burnes",
       "generation": 0,
-      "birthDate": null,
+      "birthDate": "1757",
       "deathDate": null,
       "birthPlace": null,
       "deathPlace": null,
@@ -14,15 +14,15 @@
       "mother": null,
       "spouseId": "AA2",
       "siblings": [],
-      "children": ["BA1"],
-      "notes": "",
-      "references": ""
+      "children": ["BA1", "BA3", "BA4"],
+      "notes": "Fecha de nacimiento por confirmar",
+      "references": "Registros de Parroquia de Cadereyta Jiménez"
     },
     {
       "id": "AA2",
       "name": "María André Almaras",
       "generation": 0,
-      "birthDate": null,
+      "birthDate": "1772",
       "deathDate": null,
       "birthPlace": null,
       "deathPlace": null,
@@ -32,8 +32,8 @@
       "mother": null,
       "spouseId": "AA1",
       "siblings": [],
-      "children": ["BA1"],
-      "notes": "",
+      "children": ["BA1", "BA3", "BA4"],
+      "notes": "Fecha de nacimiento por confirmar",
       "references": ""
     },
     {
@@ -49,7 +49,7 @@
       "father": "AA1",
       "mother": "AA2",
       "spouseId": "BA2",
-      "siblings": [],
+      "siblings": ["BA3", "BA4"],
       "children": ["CA1", "CB1"],
       "notes": "Posibilidad de fecha de nacimiento no comprobada. Es clasificado como nativo-americano en documentación que hace referencia a él. Nace en Nuestra Señora de La Soledad, General Terán, Nuevo León.",
       "references": ""
@@ -71,6 +71,42 @@
       "children": ["CA1", "CB1"],
       "notes": "",
       "references": ""
+    },
+    {
+      "id": "BA3",
+      "name": "María Rita Burnes",
+      "generation": 1,
+      "birthDate": "1800",
+      "deathDate": null,
+      "birthPlace": "Cadereyta Jiménez",
+      "deathPlace": null,
+      "marriageDate": "1831",
+      "marriagePlace": "Cadereyta Jiménez",
+      "father": "AA1",
+      "mother": "AA2",
+      "spouseId": null,
+      "siblings": ["BA1", "BA4"],
+      "children": [],
+      "notes": "",
+      "references": "Registros de Parroquia de Cadereyta Jiménez: Acta de Nacimiento de María Burnes y acta de matrimonio con Santiago Peña"
+    },
+    {
+      "id": "BA4",
+      "name": "Felipe Burnes",
+      "generation": 1,
+      "birthDate": null,
+      "deathDate": null,
+      "birthPlace": "Cadereyta Jiménez",
+      "deathPlace": null,
+      "marriageDate": "1832",
+      "marriagePlace": "Cadereyta Jiménez",
+      "father": "AA1",
+      "mother": "AA2",
+      "spouseId": null,
+      "siblings": ["BA1", "BA3"],
+      "children": [],
+      "notes": "Para saber más de la Hacienda de Concepción de Peñitas, se puede consultar este enlace: somosdenuevoleon.com/cadereyta-jimenez/santa-isabel-dolores/",
+      "references": "Registros de Parroquia de Cadereyta Jiménez: Acta de matrimonio de Felipe Burnes y Juana María García"
     },
     {
       "id": "CA1",
@@ -635,7 +671,7 @@
   },
   "meta": {
     "title": "Genealogía Familia Burnes",
-    "dateRange": { "min": 1794, "max": 2023 },
+    "dateRange": { "min": 1757, "max": 2023 },
     "lastUpdated": "2026-02-07"
   }
 }
