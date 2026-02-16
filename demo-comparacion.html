@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genealogía Burnes - Comparación de Diseños</title>
+
+  <!-- Fonts Originales -->
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Fonts Nuevas -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0F0F14;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .control-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, #8B4513 0%, #6B3410 100%);
+      padding: 1.5rem 2rem;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    .control-panel h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+    }
+
+    .control-panel p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    .comparison-container {
+      margin-top: 140px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .version-panel {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .version-header {
+      padding: 1rem 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.875rem;
+    }
+
+    .version-header.original {
+      background: #7A7A7A;
+      color: white;
+    }
+
+    .version-header.nuevo {
+      background: #8B4513;
+      color: white;
+    }
+
+    .version-content {
+      padding: 2rem;
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
+      position: relative;
+    }
+
+    /* ========== ESTILOS ORIGINALES ========== */
+    .original-styles {
+      font-family: 'Inter', sans-serif;
+      background: #F0EDE6;
+      color: #3D3D3D;
+    }
+
+    .original-styles .header-mockup {
+      background: linear-gradient(to bottom, rgba(240, 237, 230, 0.92) 0%, rgba(240, 237, 230, 0.6) 70%, transparent 100%);
+      padding: 1.2rem 1.5rem 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: -2rem -2rem 2rem -2rem;
+    }
+
+    .original-styles .header-title {
+      font-family: 'Zilla Slab', serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #7A7A7A;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .original-styles .header-surname {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1B1B1B;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      display: block;
+      line-height: 1;
+    }
+
+    .original-styles .header-nav {
+      display: flex;
+      gap: 2px;
+      background: rgba(27, 27, 27, 0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 8px;
+      padding: 3px;
+      margin-top: 0.4rem;
+    }
+
+    .original-styles .tab-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.4rem 1.3rem;
+      border: none;
+      border-radius: 5px;
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .original-styles .tab-btn.active {
+      background: rgba(255,255,255,0.15);
+      color: #FFFFFF;
+    }
+
+    .original-styles .tree-mockup {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .original-styles .node-example {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .original-styles .node-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #2A4D6E;
+      border: 2.5px solid #FFFFFF;
+      margin: 0 auto 0.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .original-styles .node-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #1B1B1B;
+    }
+
+    .original-styles .node-dates {
+      font-size: 10px;
+      color: #3D3D3D;
+      margin-top: 0.2rem;
+    }
+
+    .original-styles .panel-mockup {
+      background: #F7F5F0;
+      border-left: 1px solid #E8E8E4;
+      padding: 2rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+
+    .original-styles .panel-name {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1B1B1B;
+      margin-bottom: 1.5rem;
+    }
+
+    .original-styles .panel-section {
+      margin-bottom: 1.2rem;
+    }
+
+    .original-styles .panel-section-title {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #ABABAB;
+      margin-bottom: 0.4rem;
+    }
+
+    .original-styles .panel-section-content {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #3D3D3D;
+    }
+
+    .original-styles .timeline-mockup {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem;
+      background: #E8E5DD;
+      border-top: 1px solid #D4D4D0;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    .original-styles .timeline-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #ABABAB;
+    }
+
+    .original-styles .timeline-current {
+      font-family: 'Zilla Slab', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2A4D6E;
+    }
+
+    .original-styles .timeline-track {
+      flex: 1;
+      height: 4px;
+      background: #D4D4D0;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .original-styles .timeline-thumb {
+      position: absolute;
+      top: 50%;
+      left: 70%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #2A4D6E;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 1px 4px rgba(42, 77, 110, 0.3);
+    }
+
+    /* ========== ESTILOS NUEVOS ========== */
+    .nuevo-styles {
+      font-family: 'Montserrat', sans-serif;
+      background: #F5F2EB;
+      color: #3D3D3D;
+      position: relative;
+    }
+
+    /* Textura de papel */
+    .nuevo-styles::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /></filter><rect width="300" height="300" filter="url(%23noise)" opacity="0.03"/></svg>');
+      pointer-events: none;
+      z-index: 1;
+      mix-blend-mode: multiply;
+    }
+
+    .nuevo-styles > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .nuevo-styles .header-mockup {
+      background: linear-gradient(to bottom, rgba(245, 242, 235, 0.95) 0%, rgba(245, 242, 235, 0.6) 70%, transparent 100%);
+      padding: 1.2rem 1.5rem 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: -2rem -2rem 2rem -2rem;
+    }
+
+    .nuevo-styles .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #9B9B9B;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .nuevo-styles .header-surname {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: #1B1B1B;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      display: block;
+      line-height: 1;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .nuevo-styles .header-surname::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #D4AF37 0%, transparent 100%);
+    }
+
+    .nuevo-styles .header-nav {
+      display: flex;
+      gap: 2px;
+      background: rgba(27, 27, 27, 0.9);
+      backdrop-filter: blur(12px);
+      border-radius: 8px;
+      padding: 4px;
+      margin-top: 0.4rem;
+    }
+
+    .nuevo-styles .tab-btn {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nuevo-styles .tab-btn::before {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #D4AF37;
+      transform: translateX(-50%);
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nuevo-styles .tab-btn.active {
+      background: linear-gradient(135deg, rgba(217, 175, 55, 0.15) 0%, rgba(139, 69, 19, 0.1) 100%);
+      color: #FFFFFF;
+      box-shadow: inset 0 0 0 1px rgba(217, 175, 55, 0.3);
+    }
+
+    .nuevo-styles .tab-btn.active::before {
+      width: 60%;
+    }
+
+    .nuevo-styles .tree-mockup {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .nuevo-styles .node-example {
+      display: inline-block;
+      margin: 0 1rem;
+      animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+    }
+
+    .nuevo-styles .node-example:nth-child(1) { animation-delay: 0.05s; }
+    .nuevo-styles .node-example:nth-child(2) { animation-delay: 0.1s; }
+    .nuevo-styles .node-example:nth-child(3) { animation-delay: 0.15s; }
+
+    .nuevo-styles .node-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #8B4513;
+      border: 3px solid #FFFFFF;
+      margin: 0 auto 0.5rem;
+      box-shadow: 0 2px 6px rgba(139, 69, 19, 0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .nuevo-styles .node-circle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
+    }
+
+    .nuevo-styles .node-circle.generation-0 {
+      border-color: #D4AF37;
+      border-width: 4px;
+    }
+
+    .nuevo-styles .node-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #1B1B1B;
+    }
+
+    .nuevo-styles .node-dates {
+      font-family: 'Playfair Display', serif;
+      font-size: 10px;
+      color: #6A6A6A;
+      margin-top: 0.2rem;
+      font-style: italic;
+    }
+
+    .nuevo-styles .panel-mockup {
+      background:
+        linear-gradient(180deg,
+          rgba(217, 175, 55, 0.03) 0%,
+          transparent 20%,
+          transparent 80%,
+          rgba(139, 69, 19, 0.03) 100%
+        ),
+        #FDFCF9;
+      border-left: 3px solid #D4AF37;
+      padding: 2rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-top: 2rem;
+    }
+
+    .nuevo-styles .panel-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1B1B1B;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .nuevo-styles .panel-name::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, #D4AF37 0%, #8B4513 60%, transparent 100%);
+    }
+
+    .nuevo-styles .panel-section {
+      margin-bottom: 1.2rem;
+    }
+
+    .nuevo-styles .panel-section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B4513;
+      margin-bottom: 0.6rem;
+      position: relative;
+      padding-left: 12px;
+    }
+
+    .nuevo-styles .panel-section-title::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: #D4AF37;
+      font-size: 0.5rem;
+    }
+
+    .nuevo-styles .panel-section-content {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #3D3D3D;
+    }
+
+    .nuevo-styles .timeline-mockup {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.02) 0%, transparent 100%),
+        #EAE6DC;
+      border-top: 2px solid #D4AF37;
+      border-radius: 8px;
+      margin-top: 2rem;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
+    }
+
+    .nuevo-styles .timeline-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #9B9B9B;
+    }
+
+    .nuevo-styles .timeline-current {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #8B4513;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .nuevo-styles .timeline-track {
+      flex: 1;
+      height: 4px;
+      background: #D9D4CA;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .nuevo-styles .timeline-thumb {
+      position: absolute;
+      top: 50%;
+      left: 70%;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #D4AF37 0%, #8B4513 100%);
+      border: 3px solid #FFFFFF;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 2px 8px rgba(139, 69, 19, 0.4);
+      cursor: grab;
+      transition: transform 0.2s;
+    }
+
+    .nuevo-styles .timeline-thumb:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    .feature-list {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(139, 69, 19, 0.08) 0%, rgba(212, 175, 55, 0.05) 100%);
+      border-radius: 12px;
+      border-left: 4px solid #8B4513;
+    }
+
+    .feature-list h3 {
+      font-family: 'Playfair Display', serif;
+      color: #1B1B1B;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    .feature-list ul {
+      list-style: none;
+      padding: 0;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      color: #8B4513;
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 1200px) {
+      .comparison-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="control-panel">
+    <h1>🌳 Genealogía Burnes - Comparación de Diseños</h1>
+    <p>Compara el diseño actual con la propuesta "Archivo Histórico Editorial" →</p>
+  </div>
+
+  <div class="comparison-container">
+    <!-- VERSIÓN ORIGINAL -->
+    <div class="version-panel">
+      <div class="version-header original">
+        ⬅️ Diseño Actual
+      </div>
+      <div class="version-content original-styles">
+        <div class="header-mockup">
+          <div>
+            <div class="header-title">Genealogía<br><span class="header-surname">Burnes</span></div>
+          </div>
+          <nav class="header-nav">
+            <button class="tab-btn active">Árbol</button>
+            <button class="tab-btn">Mapa</button>
+          </nav>
+        </div>
+
+        <div class="tree-mockup">
+          <div class="node-example">
+            <div class="node-circle"></div>
+            <div class="node-label">Juan Burnes</div>
+            <div class="node-dates">1757 - ?</div>
+          </div>
+          <div class="node-example">
+            <div class="node-circle"></div>
+            <div class="node-label">María André</div>
+            <div class="node-dates">1772 - ?</div>
+          </div>
+          <div class="node-example">
+            <div class="node-circle"></div>
+            <div class="node-label">Juan José</div>
+            <div class="node-dates">1794 - ?</div>
+          </div>
+        </div>
+
+        <div class="panel-mockup">
+          <h2 class="panel-name">Arturo Burnes Martínez</h2>
+          <div class="panel-section">
+            <div class="panel-section-title">Fechas</div>
+            <div class="panel-section-content">
+              Nacimiento: 15 de mayo de 1942<br>
+              Defunción: 10 de agosto de 2023
+            </div>
+          </div>
+          <div class="panel-section">
+            <div class="panel-section-title">Lugares</div>
+            <div class="panel-section-content">
+              Nacimiento: Monterrey, Nuevo León<br>
+              Defunción: Monterrey, Nuevo León
+            </div>
+          </div>
+          <div class="panel-section">
+            <div class="panel-section-title">Familia</div>
+            <div class="panel-section-content">
+              Cónyuge: Ma Jesús Ortiz González<br>
+              Hijos: 4
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-mockup">
+          <span class="timeline-label">1757</span>
+          <div class="timeline-track">
+            <div class="timeline-thumb"></div>
+          </div>
+          <span class="timeline-label">2023</span>
+          <span class="timeline-current">1942</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VERSIÓN NUEVA -->
+    <div class="version-panel">
+      <div class="version-header nuevo">
+        ✨ Nuevo Diseño: Archivo Histórico Editorial
+      </div>
+      <div class="version-content nuevo-styles">
+        <div class="header-mockup">
+          <div>
+            <div class="header-title">Genealogía<br><span class="header-surname">Burnes</span></div>
+          </div>
+          <nav class="header-nav">
+            <button class="tab-btn active">Árbol</button>
+            <button class="tab-btn">Mapa</button>
+          </nav>
+        </div>
+
+        <div class="tree-mockup">
+          <div class="node-example">
+            <div class="node-circle generation-0"></div>
+            <div class="node-label">Juan Burnes</div>
+            <div class="node-dates">1757 - ?</div>
+          </div>
+          <div class="node-example">
+            <div class="node-circle generation-0"></div>
+            <div class="node-label">María André</div>
+            <div class="node-dates">1772 - ?</div>
+          </div>
+          <div class="node-example">
+            <div class="node-circle"></div>
+            <div class="node-label">Juan José</div>
+            <div class="node-dates">1794 - ?</div>
+          </div>
+        </div>
+
+        <div class="panel-mockup">
+          <h2 class="panel-name">Arturo Burnes Martínez</h2>
+          <div class="panel-section">
+            <div class="panel-section-title">Fechas</div>
+            <div class="panel-section-content">
+              Nacimiento: 15 de mayo de 1942<br>
+              Defunción: 10 de agosto de 2023
+            </div>
+          </div>
+          <div class="panel-section">
+            <div class="panel-section-title">Lugares</div>
+            <div class="panel-section-content">
+              Nacimiento: Monterrey, Nuevo León<br>
+              Defunción: Monterrey, Nuevo León
+            </div>
+          </div>
+          <div class="panel-section">
+            <div class="panel-section-title">Familia</div>
+            <div class="panel-section-content">
+              Cónyuge: Ma Jesús Ortiz González<br>
+              Hijos: 4
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-mockup">
+          <span class="timeline-label">1757</span>
+          <div class="timeline-track">
+            <div class="timeline-thumb"></div>
+          </div>
+          <span class="timeline-label">2023</span>
+          <span class="timeline-current">1942</span>
+        </div>
+
+        <div class="feature-list">
+          <h3>✨ Mejoras Implementadas</h3>
+          <ul>
+            <li>Tipografía histórica: <strong>Playfair Display + Montserrat</strong></li>
+            <li>Paleta sepia/marrón con dorado (#8B4513, #D4AF37)</li>
+            <li>Apellido con ornamento decorativo dorado</li>
+            <li>Nodos con sombras dramáticas y hover effects</li>
+            <li>Generación 0 con borde dorado distintivo</li>
+            <li>Panel con gradientes sutiles y borde dorado</li>
+            <li>Títulos de sección con diamante decorativo (◆)</li>
+            <li>Nombre con línea decorativa de separación</li>
+            <li>Timeline con thumb estilo reloj antiguo</li>
+            <li>Textura de papel vintage sutil</li>
+            <li>Tabs con underline dorado en activo</li>
+            <li>Animaciones de entrada escalonadas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    console.log('%c🌳 Genealogía Burnes - Comparación de Diseños', 'font-size: 20px; font-weight: bold; color: #8B4513;');
+    console.log('%cNota las diferencias:', 'font-size: 14px; font-weight: bold;');
+    console.log('• Tipografía Playfair Display (más elegante y editorial)');
+    console.log('• Paleta sepia/marrón con acentos dorados');
+    console.log('• Ornamentos decorativos (líneas, diamantes)');
+    console.log('• Hover effects en nodos');
+    console.log('• Animaciones de entrada');
+    console.log('• Textura de papel vintage');
+    console.log('• Timeline con estilo reloj antiguo');
+  </script>
+</body>
+</html>
