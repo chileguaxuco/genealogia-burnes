@@ -25,19 +25,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generar config.js con token de Mapbox
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Preparar sitio con config.js
         env:
           MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
         run: |
-          echo "window.MAPBOX_TOKEN = '$MAPBOX_TOKEN';" > config.js
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+          mkdir _site
+          cp -r . _site/ 2>/dev/null || true
+          echo "window.MAPBOX_TOKEN = '$MAPBOX_TOKEN';" > _site/config.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
