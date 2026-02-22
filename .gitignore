@@ -1,5 +1,5 @@
-# Credenciales — nunca subir al repositorio
-config.js
+# config.js tiene un token Mapbox pk. (público) — se puede subir al repo
+# config.example.js sirve como plantilla para nuevos colaboradores
 
 # Archivos de respaldo temporales
 css/style-mejorado.css
