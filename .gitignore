@@ -1,0 +1,11 @@
+# Credenciales — nunca subir al repositorio
+config.js
+
+# Archivos de respaldo temporales
+css/style-mejorado.css
+css/style-original-backup.css
+demo-comparacion.html
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
