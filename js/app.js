@@ -31,9 +31,10 @@ async function init() {
     APP.data = data;
     data.persons.forEach(p => { APP.personsMap[p.id] = p; });
 
-    // Init sub-systems
+    // Init sub-systems — initMap se aísla para que un token ausente
+    // no impida que el árbol y el panel funcionen
     initTree(data);
-    initMap(data);
+    try { initMap(data); } catch (e) { console.warn('Mapa no disponible:', e); }
     initPanel(APP, highlightTreeNode);
     initSearch(APP, openPanel);
 

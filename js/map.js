@@ -2,9 +2,6 @@
 
 import { extractYear } from './utils.js';
 
-// Token cargado desde config.js (archivo local, gitignoreado)
-mapboxgl.accessToken = window.MAPBOX_TOKEN || '';
-
 let mapData;
 let mapPersonsMap = {};
 let mapMarkers    = [];
@@ -16,6 +13,24 @@ let layerFilters = { birth: true, death: true, marriage: true, migration: true }
 const MAP_COLORS = { birth: '#2A4D6E', death: '#8B3A3A', marriage: '#6B7F3A' };
 
 export function initMap(data) {
+  // Sin token → mostrar mensaje en el contenedor y salir sin lanzar error
+  if (!window.MAPBOX_TOKEN) {
+    const container = document.getElementById('map-container');
+    if (container) {
+      container.style.cssText = 'display:flex;align-items:center;justify-content:center;background:#1a1a20;';
+      container.innerHTML = `
+        <div style="text-align:center;color:rgba(255,255,255,0.45);font-family:Inter,sans-serif;font-size:0.85rem;line-height:1.7;padding:2rem;">
+          <div style="font-size:1.8rem;margin-bottom:0.75rem;opacity:0.3;">🗺</div>
+          <strong style="color:rgba(255,255,255,0.7);display:block;margin-bottom:0.3rem;">Mapa no disponible</strong>
+          Falta el token de Mapbox.<br>
+          Crea <code style="background:rgba(255,255,255,0.08);padding:0.1rem 0.4rem;border-radius:3px;">config.js</code> a partir de <code style="background:rgba(255,255,255,0.08);padding:0.1rem 0.4rem;border-radius:3px;">config.example.js</code>.
+        </div>`;
+    }
+    return;
+  }
+
+  mapboxgl.accessToken = window.MAPBOX_TOKEN;
+
   mapData = data;
   // Build local lookup (avoids importing APP, no circular dep)
   data.persons.forEach(p => { mapPersonsMap[p.id] = p; });
