@@ -5,12 +5,14 @@ import { initPanel, openPanel, closePanel } from './panel.js';
 import { initSearch } from './search.js';
 import { initTree, updateTreeForYear } from './tree.js';
 import { initMap, updateMapForYear } from './map.js';
+import { initSources } from './sources.js';
 
 export const APP = {
   data: null,
   currentView: 'tree',
   currentYear: 2023,
   personsMap: {},
+  evidenciasMap: {},
 };
 
 // ---- Load data and initialize ----
@@ -31,12 +33,22 @@ async function init() {
     APP.data = data;
     data.persons.forEach(p => { APP.personsMap[p.id] = p; });
 
+    // Índice de evidencias por persona: personId → [evidencia, ...]
+    APP.evidenciasMap = {};
+    (data.evidencias || []).forEach(ev => {
+      (ev.personas || []).forEach(pid => {
+        if (!APP.evidenciasMap[pid]) APP.evidenciasMap[pid] = [];
+        APP.evidenciasMap[pid].push(ev);
+      });
+    });
+
     // Init sub-systems — initMap se aísla para que un token ausente
     // no impida que el árbol y el panel funcionen
     initTree(data);
     try { initMap(data); } catch (e) { console.warn('Mapa no disponible:', e); }
     initPanel(APP, highlightTreeNode);
     initSearch(APP, openPanel);
+    initSources(APP, openPanel);
 
     setupTabs();
     setupTimeline();
@@ -49,7 +61,7 @@ async function init() {
 
 // ---- Tab navigation with directional slide transition ----
 function setupTabs() {
-  const viewOrder = ['tree', 'map'];
+  const viewOrder = ['tree', 'map', 'sources'];
 
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {

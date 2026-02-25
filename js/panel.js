@@ -1,6 +1,7 @@
 // ===== PANEL.JS — Detail panel logic =====
 
 import { formatDate, extractYear } from './utils.js';
+import { initLightbox, openLightbox } from './lightbox.js';
 
 // APP reference injected by app.js after data load
 let _app = null;
@@ -11,12 +12,23 @@ export function initPanel(app, onNavigate) {
   _onNavigate = onNavigate;
 
   document.getElementById('panel-close').addEventListener('click', closePanel);
+  initLightbox();
 
-  // Event delegation for family chips
+  // Event delegation for family chips and evidence thumbnails
   document.getElementById('panel-content').addEventListener('click', e => {
     const chip = e.target.closest('.family-chip');
     if (chip && chip.dataset.id) {
       openPanel(chip.dataset.id);
+      return;
+    }
+    const thumb = e.target.closest('.evidence-thumb');
+    if (thumb) {
+      const personId = document.getElementById('detail-panel').dataset.personId;
+      const evs = _app.evidenciasMap[personId] || [];
+      if (evs.length) {
+        const idx = parseInt(thumb.dataset.idx, 10) || 0;
+        openLightbox(evs, idx);
+      }
     }
   });
 
@@ -43,11 +55,13 @@ export function openPanel(personId) {
   renderLifeline(person);
 
   // Content sections
-  document.getElementById('panel-dates').innerHTML   = buildDatesHtml(person);
-  document.getElementById('panel-places').innerHTML  = buildPlacesHtml(person);
-  document.getElementById('panel-family').innerHTML  = buildFamilyHtml(person);
-  document.getElementById('panel-notes').innerHTML   = buildNotesHtml(person);
-  document.getElementById('panel-refs').innerHTML    = buildRefsHtml(person);
+  document.getElementById('panel-dates').innerHTML      = buildDatesHtml(person);
+  document.getElementById('panel-places').innerHTML     = buildPlacesHtml(person);
+  document.getElementById('panel-family').innerHTML     = buildFamilyHtml(person);
+  document.getElementById('panel-notes').innerHTML      = buildNotesHtml(person);
+  document.getElementById('panel-refs').innerHTML       = buildRefsHtml(person);
+  const evs = _app.evidenciasMap[personId] || [];
+  document.getElementById('panel-evidencias').innerHTML = buildEvidenciasHtml(evs);
 
   const hasPlaces = person.birthPlace || person.deathPlace || person.marriagePlace;
   document.getElementById('panel-map-link').style.display = hasPlaces ? 'inline-block' : 'none';
@@ -191,6 +205,23 @@ function buildRefsHtml(p) {
   return section('Referencias',
     `<div class="panel-section-content" style="font-size:0.78rem;color:var(--text-secondary)">${p.references}</div>`
   );
+}
+
+function buildEvidenciasHtml(evs) {
+  if (!evs || !evs.length) return '';
+  const thumbs = evs.map((ev, i) => {
+    if (ev.tipo === 'imagen') {
+      return `<button class="evidence-thumb" data-idx="${i}" title="${ev.titulo}" aria-label="Ver: ${ev.titulo}">
+        <img src="${ev.archivo}" alt="${ev.titulo}">
+      </button>`;
+    } else {
+      return `<button class="evidence-thumb evidence-thumb--pdf" data-idx="${i}" title="${ev.titulo}" aria-label="Ver: ${ev.titulo}">
+        <span class="evidence-pdf-icon" aria-hidden="true">PDF</span>
+        <span class="evidence-pdf-label">${ev.titulo}</span>
+      </button>`;
+    }
+  }).join('');
+  return section('Evidencias', `<div class="evidence-grid">${thumbs}</div>`);
 }
 
 // ── Helpers ──

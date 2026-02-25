@@ -67,6 +67,7 @@
       <nav class="header-nav" aria-label="Vista">
         <button class="tab-btn active" data-view="tree">Árbol</button>
         <button class="tab-btn" data-view="map">Mapa</button>
+        <button class="tab-btn" data-view="sources">Fuentes</button>
       </nav>
     </div>
   </header>
@@ -90,6 +91,11 @@
       </div>
     </section>
 
+    <!-- Sources view -->
+    <section id="sources-view" class="view" aria-label="Fuentes primarias">
+      <div id="sources-container"></div>
+    </section>
+
     <!-- Detail panel -->
     <aside id="detail-panel" class="panel-closed" aria-label="Detalle de persona">
       <button id="panel-close" aria-label="Cerrar panel">&times;</button>
@@ -111,11 +117,12 @@
 
       <!-- Content sections -->
       <div id="panel-content">
-        <div id="panel-dates"   class="panel-section"></div>
-        <div id="panel-places"  class="panel-section"></div>
-        <div id="panel-family"  class="panel-section"></div>
-        <div id="panel-notes"   class="panel-section"></div>
-        <div id="panel-refs"    class="panel-section"></div>
+        <div id="panel-dates"       class="panel-section"></div>
+        <div id="panel-places"      class="panel-section"></div>
+        <div id="panel-family"      class="panel-section"></div>
+        <div id="panel-notes"       class="panel-section"></div>
+        <div id="panel-refs"        class="panel-section"></div>
+        <div id="panel-evidencias"  class="panel-section"></div>
         <button id="panel-map-link" class="panel-link" style="display:none;">Ver en mapa</button>
       </div>
     </aside>
@@ -138,6 +145,21 @@
     <span id="timeline-label-max" class="timeline-label" aria-hidden="true">2023</span>
     <span id="timeline-current" class="timeline-current" aria-live="polite">2023</span>
   </footer>
+
+  <!-- Lightbox para evidencias -->
+  <div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Visor de evidencia" hidden>
+    <button id="lightbox-close" aria-label="Cerrar visor">&times;</button>
+    <button id="lightbox-prev" class="lightbox-nav" aria-label="Evidencia anterior">&#8592;</button>
+    <button id="lightbox-next" class="lightbox-nav" aria-label="Evidencia siguiente">&#8594;</button>
+    <div id="lightbox-content"></div>
+    <div id="lightbox-meta">
+      <p id="lightbox-titulo"></p>
+      <p id="lightbox-fuente"></p>
+      <p id="lightbox-coleccion"></p>
+      <p id="lightbox-fecha"></p>
+      <a id="lightbox-url" href="#" target="_blank" rel="noopener noreferrer">Ver en archivo externo ↗</a>
+    </div>
+  </div>
 
   <!-- Credenciales locales (config.js está en .gitignore) -->
   <script src="config.js"></script>

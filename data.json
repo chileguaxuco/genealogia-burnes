@@ -14,7 +14,11 @@
       "mother": null,
       "spouseId": "AA2",
       "siblings": [],
-      "children": ["BA1", "BA3", "BA4"],
+      "children": [
+        "BA1",
+        "BA3",
+        "BA4"
+      ],
       "notes": "Fecha de nacimiento por confirmar",
       "references": "Registros de Parroquia de Cadereyta Jiménez"
     },
@@ -32,7 +36,11 @@
       "mother": null,
       "spouseId": "AA1",
       "siblings": [],
-      "children": ["BA1", "BA3", "BA4"],
+      "children": [
+        "BA1",
+        "BA3",
+        "BA4"
+      ],
       "notes": "Fecha de nacimiento por confirmar",
       "references": ""
     },
@@ -49,8 +57,14 @@
       "father": "AA1",
       "mother": "AA2",
       "spouseId": "BA2",
-      "siblings": ["BA3", "BA4"],
-      "children": ["CA1", "CB1"],
+      "siblings": [
+        "BA3",
+        "BA4"
+      ],
+      "children": [
+        "CA1",
+        "CB1"
+      ],
       "notes": "Posibilidad de fecha de nacimiento no comprobada. Es clasificado como nativo-americano en documentación que hace referencia a él. Nace en Nuestra Señora de La Soledad, General Terán, Nuevo León.",
       "references": ""
     },
@@ -68,7 +82,10 @@
       "mother": null,
       "spouseId": "BA1",
       "siblings": [],
-      "children": ["CA1", "CB1"],
+      "children": [
+        "CA1",
+        "CB1"
+      ],
       "notes": "",
       "references": ""
     },
@@ -85,7 +102,10 @@
       "father": "AA1",
       "mother": "AA2",
       "spouseId": null,
-      "siblings": ["BA1", "BA4"],
+      "siblings": [
+        "BA1",
+        "BA4"
+      ],
       "children": [],
       "notes": "",
       "references": "Registros de Parroquia de Cadereyta Jiménez: Acta de Nacimiento de María Burnes y acta de matrimonio con Santiago Peña"
@@ -103,9 +123,12 @@
       "father": "AA1",
       "mother": "AA2",
       "spouseId": null,
-      "siblings": ["BA1", "BA3"],
+      "siblings": [
+        "BA1",
+        "BA3"
+      ],
       "children": [],
-      "notes": "Para saber más de la Hacienda de Concepción de Peñitas, se puede consultar este enlace: somosdenuevoleon.com/cadereyta-jimenez/santa-isabel-dolores/",
+      "notes": "El matrimonio se celebra en la Capilla de la Hacienda de Concepción de Peñita, Cadereyta, Nuevo León. Para saber más de la Hacienda de Concepción de Peñitas, se puede consultar: somosdenuevoleon.com/cadereyta-jimenez/santa-isabel-dolores/",
       "references": "Registros de Parroquia de Cadereyta Jiménez: Acta de matrimonio de Felipe Burnes y Juana María García"
     },
     {
@@ -121,9 +144,19 @@
       "father": "BA1",
       "mother": "BA2",
       "spouseId": "CA2",
-      "siblings": ["CB1"],
-      "children": ["CA3", "CA4", "CA5", "CA6"],
-      "migration": ["General Terán", "Cadereyta Jiménez"],
+      "siblings": [
+        "CB1"
+      ],
+      "children": [
+        "CA3",
+        "CA4",
+        "CA5",
+        "CA6"
+      ],
+      "migration": [
+        "General Terán",
+        "Cadereyta Jiménez"
+      ],
       "notes": "Nace en la Hacienda de la Soledad (General Terán). Casamiento ocurre en Cadereyta Jiménez.",
       "references": "Registro Civil: Lista parcial de registros de matrimonio, 1556-1989"
     },
@@ -141,7 +174,12 @@
       "mother": null,
       "spouseId": "CA1",
       "siblings": [],
-      "children": ["CA3", "CA4", "CA5", "CA6"],
+      "children": [
+        "CA3",
+        "CA4",
+        "CA5",
+        "CA6"
+      ],
       "notes": "Se casa en 1847 con Antonio Burnes.",
       "references": ""
     },
@@ -158,7 +196,11 @@
       "father": "CA1",
       "mother": "CA2",
       "spouseId": null,
-      "siblings": ["CA4", "CA5", "CA6"],
+      "siblings": [
+        "CA4",
+        "CA5",
+        "CA6"
+      ],
       "children": [],
       "notes": "Se registra que se le dio sepultura con 10 meses de nacida en la Parroquia de Cadereyta Jiménez.",
       "references": ""
@@ -176,10 +218,14 @@
       "father": "CA1",
       "mother": "CA2",
       "spouseId": null,
-      "siblings": ["CA3", "CA5", "CA6"],
+      "siblings": [
+        "CA3",
+        "CA5",
+        "CA6"
+      ],
       "children": [],
       "notes": "",
-      "references": "Parroquias de la Iglesia Católica, Nuevo León. Courtesy of the Academia Mexicana de Genealogía y Heráldica y Archivo General de la Nación."
+      "references": "Parroquias de la Iglesia Católica, Nuevo León (Catholic Church parishes, Nuevo León). Courtesy of the Academia Mexicana de Genealogia y Heraldica and Archivo General de la Nación. México, Nuevo León, registros parroquiales, 1667-1981"
     },
     {
       "id": "CA5",
@@ -194,9 +240,19 @@
       "father": "CA1",
       "mother": "CA2",
       "spouseId": "DA1",
-      "siblings": ["CA3", "CA4", "CA6"],
-      "children": ["DA2", "DA3"],
-      "migration": ["Cadereyta Jiménez", "Monterrey, Nuevo León"],
+      "siblings": [
+        "CA3",
+        "CA4",
+        "CA6"
+      ],
+      "children": [
+        "DA2",
+        "DA3"
+      ],
+      "migration": [
+        "Cadereyta Jiménez",
+        "Monterrey, Nuevo León"
+      ],
       "notes": "Vive en San Luisito en 1895.",
       "references": "Archivo de Registro Civil: Acta de matrimonio entre Cipriano Burnes y Guadalupe Guerra"
     },
@@ -213,7 +269,11 @@
       "father": "CA1",
       "mother": "CA2",
       "spouseId": null,
-      "siblings": ["CA3", "CA4", "CA5"],
+      "siblings": [
+        "CA3",
+        "CA4",
+        "CA5"
+      ],
       "children": [],
       "notes": "En el año de su casamiento (1880) ya están fallecidos Antonio Burnes y Ramona García. La persona a cargo de ella es Nicolás González. Se casa con Eulogio González.",
       "references": "Archivo General del Registro Civil del Estado; Nuevo León, Mexico. Año: 1880-1883"
@@ -231,10 +291,12 @@
       "father": "BA1",
       "mother": "BA2",
       "spouseId": null,
-      "siblings": ["CA1"],
+      "siblings": [
+        "CA1"
+      ],
       "children": [],
       "notes": "En otro documento se le llama \"Feliciana\". Se casa con José Luis Villafranca.",
-      "references": "Parroquias de la Iglesia Católica, Nuevo León. Courtesy of the Academia Mexicana de Genealogía y Heráldica y Archivo General de la Nación. Matrimonios 1828-1849"
+      "references": "Parroquias de la Iglesia Católica, Nuevo León (Catholic Church parishes, Nuevo León). Courtesy of the Academia Mexicana de Genealogia y Heraldica and Archivo General de la Nación. México, Nuevo León, registros parroquiales, 1667-1981. Matrimonios 1828-1849"
     },
     {
       "id": "DA1",
@@ -250,8 +312,14 @@
       "mother": null,
       "spouseId": "CA5",
       "siblings": [],
-      "children": ["DA2", "DA3"],
-      "migration": ["Monterrey, Nuevo León", "Real de Catorce, San Luis Potosí"],
+      "children": [
+        "DA2",
+        "DA3"
+      ],
+      "migration": [
+        "Monterrey, Nuevo León",
+        "Real de Catorce, San Luis Potosí"
+      ],
       "notes": "Hija de Santos Guerra y Jimena Ramírez. Se casa a los 17 años. Se divorcia de Cipriano Burnes en 1900.",
       "references": "Censo 1930: Registro Civil"
     },
@@ -268,7 +336,9 @@
       "father": "CA5",
       "mother": "DA1",
       "spouseId": null,
-      "siblings": ["DA3"],
+      "siblings": [
+        "DA3"
+      ],
       "children": [],
       "notes": "Fallece en el Barrio de San Luisito de fiebre el 8 de febrero de 1897.",
       "references": "Archivo de Registro Civil. Defunciones de 1897-1898"
@@ -286,11 +356,20 @@
       "father": "CA5",
       "mother": "DA1",
       "spouseId": "DA4",
-      "siblings": ["DA2"],
-      "children": ["EA1"],
-      "migration": ["Monterrey, Nuevo León", "Real de Catorce, San Luis Potosí", "Aranzazú, Zacatecas", "Zacatecas, Zacatecas"],
-      "notes": "De oficio: Comerciante. Se clasifica como lugar de nacimiento en San Luis Potosí en Censo de 1930 (posible confusión entre lugar de nacimiento de Tomasa Martínez y Cipriano Burnes). Nació a las 5:00 am. Empleado de minas en el año de 1925. Fallece en 1945 y es enterrado en el panteón de La Purísima, en Zacatecas.",
-      "references": "Censo 1930: Registro Civil. Archivo Registro Civil: Acta de nacimiento de Cipriano Burnes"
+      "siblings": [
+        "DA2"
+      ],
+      "children": [
+        "EA1"
+      ],
+      "migration": [
+        "Monterrey, Nuevo León",
+        "Real de Catorce, San Luis Potosí",
+        "Aranzazú, Zacatecas",
+        "Zacatecas, Zacatecas"
+      ],
+      "notes": "De oficio: Comerciante. Se clasifica como lugar de nacimiento en San Luis Potosí en Censo de 1930 (posible confusión entre lugar de nacimiento de Tomasa Martínez y Cipriano Burnes). Nació a las 5:00 am. Empleado de minas en el año de 1920. Ese mismo año compra una casa a la señora Leonarda Martínez y a Agustina G. Duque en Real de Catorce, en la que se le describe como casado y originario de Monterrey. Fallece en 1945 y es enterrado en el panteón de La Purísima, en Zacatecas.",
+      "references": "Censo 1930: Registro Civil. Archivo Registro Civil: Acta de nacimiento de Cipriano Burnes. Dirección del Registro Civil y Notarías de Zacatecas. Año: 1921-1950"
     },
     {
       "id": "DA4",
@@ -306,9 +385,15 @@
       "mother": null,
       "spouseId": "DA3",
       "siblings": [],
-      "children": ["EA1"],
-      "migration": ["Real de Catorce, San Luis Potosí", "Aranzazú, Zacatecas", "Zacatecas, Zacatecas"],
-      "notes": "Se dedica al hogar según censo. Muere en Zacatecas, en el callejón del Enano, de una neumonía fulminante.",
+      "children": [
+        "EA1"
+      ],
+      "migration": [
+        "Real de Catorce, San Luis Potosí",
+        "Aranzazú, Zacatecas",
+        "Zacatecas, Zacatecas"
+      ],
+      "notes": "Se dedica al hogar según censo y acta de matrimonio de Arturo Burnes y María de Jesús Ortiz. Muere en Zacatecas, en el callejón del Enano, de una neumonía fulminante.",
       "references": "Censo 1930: Registro Civil"
     },
     {
@@ -325,16 +410,23 @@
       "mother": "DA4",
       "spouseId": "EA2",
       "siblings": [],
-      "children": ["FA1", "FA2", "FA3"],
-      "migration": ["Aranzazú, Zacatecas", "Zacatecas, Zacatecas"],
-      "notes": "De oficio: Comerciante. De raza mestiza. Lugar de residencia certificado en su acta de defunción: Av. Insurgentes 144. Se casa con María de Jesús Ortiz en la casa número 66 de la Calle Fernando Villalpando.",
-      "references": "Censo 1930: Registro Civil. Registrado como Arturo Burnes Pérez. Dirección del Registro Civil y Notarías de Zacatecas. Año: 1921-1950. Registro Civil: Acta de defunción de Arturo Burnes"
+      "children": [
+        "FA1",
+        "FA2",
+        "FA3"
+      ],
+      "migration": [
+        "Aranzazú, Zacatecas",
+        "Zacatecas, Zacatecas"
+      ],
+      "notes": "De oficio: Comerciante. De raza mestiza según su acta de defunción. En su acta de matrimonio con María de Jesús Ortiz se menciona que es de oficio Chofer. En dicho documento su domicilio aparece como Av. Insurgentes 144. Se casa con María de Jesús Ortiz en la casa número 66 de la Calle Fernando Villalpando.",
+      "references": "Censo 1930: Registro Civil. Registrado como Arturo Burnes Pérez. Dirección del Registro Civil y Notarías de Zacatecas (Zacatecas Civil Registry State Archives). Año: 1921-1950. Registro Civil: Acta de defunción de Arturo Burnes"
     },
     {
       "id": "EA2",
       "name": "María de Jesús Ortiz",
       "generation": 5,
-      "birthDate": null,
+      "birthDate": "1928",
       "deathDate": "2023",
       "birthPlace": "Malpaso, Zacatecas",
       "deathPlace": "Aguascalientes, Aguascalientes",
@@ -344,9 +436,17 @@
       "mother": null,
       "spouseId": "EA1",
       "siblings": [],
-      "children": ["FA1", "FA2", "FA3"],
-      "migration": ["Malpaso, Zacatecas", "Zacatecas, Zacatecas", "Aguascalientes, Aguascalientes"],
-      "notes": "Se casa con Arturo Burnes Martínez en la casa número 66 de la Calle Fernando Villalpando.",
+      "children": [
+        "FA1",
+        "FA2",
+        "FA3"
+      ],
+      "migration": [
+        "Malpaso, Zacatecas",
+        "Zacatecas, Zacatecas",
+        "Aguascalientes, Aguascalientes"
+      ],
+      "notes": "Se casa con Arturo Burnes Martínez en la casa número 66 de la Calle Fernando Villalpando, Zacatecas. Al momento del matrimonio su domicilio es Calle Fernando Villalpando número 66.",
       "references": "Actas de matrimonio de Registro Civil"
     },
     {
@@ -362,9 +462,20 @@
       "father": "EA1",
       "mother": "EA2",
       "spouseId": "FA1S",
-      "siblings": ["FA2", "FA3"],
-      "children": ["GA1", "GA2", "GA3", "GA4"],
-      "migration": ["Zacatecas, Zacatecas", "Aguascalientes, Aguascalientes"],
+      "siblings": [
+        "FA2",
+        "FA3"
+      ],
+      "children": [
+        "GA1",
+        "GA2",
+        "GA3",
+        "GA4"
+      ],
+      "migration": [
+        "Zacatecas, Zacatecas",
+        "Aguascalientes, Aguascalientes"
+      ],
       "notes": "",
       "references": ""
     },
@@ -382,7 +493,12 @@
       "mother": null,
       "spouseId": "FA1",
       "siblings": [],
-      "children": ["GA1", "GA2", "GA3", "GA4"],
+      "children": [
+        "GA1",
+        "GA2",
+        "GA3",
+        "GA4"
+      ],
       "notes": "",
       "references": ""
     },
@@ -399,7 +515,11 @@
       "father": "FA1S",
       "mother": "FA1",
       "spouseId": null,
-      "siblings": ["GA2", "GA3", "GA4"],
+      "siblings": [
+        "GA2",
+        "GA3",
+        "GA4"
+      ],
       "children": [],
       "notes": "",
       "references": ""
@@ -417,7 +537,11 @@
       "father": "FA1S",
       "mother": "FA1",
       "spouseId": null,
-      "siblings": ["GA1", "GA3", "GA4"],
+      "siblings": [
+        "GA1",
+        "GA3",
+        "GA4"
+      ],
       "children": [],
       "notes": "",
       "references": ""
@@ -435,7 +559,11 @@
       "father": "FA1S",
       "mother": "FA1",
       "spouseId": null,
-      "siblings": ["GA1", "GA2", "GA4"],
+      "siblings": [
+        "GA1",
+        "GA2",
+        "GA4"
+      ],
       "children": [],
       "notes": "",
       "references": ""
@@ -453,7 +581,11 @@
       "father": "FA1S",
       "mother": "FA1",
       "spouseId": null,
-      "siblings": ["GA1", "GA2", "GA3"],
+      "siblings": [
+        "GA1",
+        "GA2",
+        "GA3"
+      ],
       "children": [],
       "notes": "",
       "references": ""
@@ -471,8 +603,15 @@
       "father": "EA1",
       "mother": "EA2",
       "spouseId": "FA2S",
-      "siblings": ["FA1", "FA3"],
-      "children": ["GB1", "GB2", "GB3"],
+      "siblings": [
+        "FA1",
+        "FA3"
+      ],
+      "children": [
+        "GB1",
+        "GB2",
+        "GB3"
+      ],
       "notes": "",
       "references": ""
     },
@@ -490,7 +629,11 @@
       "mother": null,
       "spouseId": "FA2",
       "siblings": [],
-      "children": ["GB1", "GB2", "GB3"],
+      "children": [
+        "GB1",
+        "GB2",
+        "GB3"
+      ],
       "notes": "",
       "references": ""
     },
@@ -507,7 +650,10 @@
       "father": "FA2",
       "mother": "FA2S",
       "spouseId": null,
-      "siblings": ["GB2", "GB3"],
+      "siblings": [
+        "GB2",
+        "GB3"
+      ],
       "children": [],
       "notes": "",
       "references": ""
@@ -525,8 +671,14 @@
       "father": "FA2",
       "mother": "FA2S",
       "spouseId": "GB2S",
-      "siblings": ["GB1", "GB3"],
-      "children": ["HB1", "HB2"],
+      "siblings": [
+        "GB1",
+        "GB3"
+      ],
+      "children": [
+        "HB1",
+        "HB2"
+      ],
       "notes": "",
       "references": ""
     },
@@ -543,7 +695,10 @@
       "father": "FA2",
       "mother": "FA2S",
       "spouseId": null,
-      "siblings": ["GB1", "GB2"],
+      "siblings": [
+        "GB1",
+        "GB2"
+      ],
       "children": [],
       "notes": "",
       "references": ""
@@ -561,8 +716,13 @@
       "father": "EA1",
       "mother": "EA2",
       "spouseId": "FA3S",
-      "siblings": ["FA1", "FA2"],
-      "children": ["GC1"],
+      "siblings": [
+        "FA1",
+        "FA2"
+      ],
+      "children": [
+        "GC1"
+      ],
       "notes": "",
       "references": ""
     },
@@ -580,7 +740,9 @@
       "mother": null,
       "spouseId": "FA3",
       "siblings": [],
-      "children": ["GC1"],
+      "children": [
+        "GC1"
+      ],
       "notes": "",
       "references": ""
     },
@@ -616,7 +778,10 @@
       "mother": null,
       "spouseId": "GB2",
       "siblings": [],
-      "children": ["HB1", "HB2"],
+      "children": [
+        "HB1",
+        "HB2"
+      ],
       "notes": "",
       "references": ""
     },
@@ -633,7 +798,9 @@
       "father": "GB2",
       "mother": "GB2S",
       "spouseId": null,
-      "siblings": ["HB2"],
+      "siblings": [
+        "HB2"
+      ],
       "children": [],
       "notes": "",
       "references": ""
@@ -651,27 +818,108 @@
       "father": "GB2",
       "mother": "GB2S",
       "spouseId": null,
-      "siblings": ["HB1"],
+      "siblings": [
+        "HB1"
+      ],
       "children": [],
       "notes": "",
       "references": ""
     }
   ],
+  "evidencias": [
+    {
+      "id": "EV1",
+      "tipo": "pdf",
+      "archivo": "evidencias/EA1/acta-matrimonio.pdf",
+      "titulo": "Acta de matrimonio — Arturo Burnes Martínez y María de Jesús Ortiz",
+      "fuente": "Dirección del Registro Civil y Notarías de Zacatecas",
+      "coleccion": "Registro Civil",
+      "fecha": "1947-04-28",
+      "url": "",
+      "notas": "",
+      "personas": [
+        "EA1",
+        "EA2"
+      ]
+    },
+    {
+      "id": "EV2",
+      "tipo": "pdf",
+      "archivo": "evidencias/EA1/acta-matrimonio-certificada.pdf",
+      "titulo": "Acta de matrimonio certificada — Arturo Burnes Martínez y María de Jesús Ortiz",
+      "fuente": "Dirección del Registro Civil y Notarías de Zacatecas",
+      "coleccion": "Registro Civil",
+      "fecha": "1947-04-28",
+      "url": "",
+      "notas": "",
+      "personas": [
+        "EA1",
+        "EA2"
+      ]
+    },
+    {
+      "id": "EV3",
+      "tipo": "pdf",
+      "archivo": "evidencias/EA1/acta-defuncion.pdf",
+      "titulo": "Acta de defunción — Arturo Burnes Martínez",
+      "fuente": "Dirección del Registro Civil y Notarías de Zacatecas",
+      "coleccion": "Año: 1921-1950",
+      "fecha": "1951-12-03",
+      "url": "",
+      "notas": "",
+      "personas": [
+        "EA1"
+      ]
+    }
+  ],
   "locations": {
-    "General Terán": { "lat": 25.25, "lng": -99.68 },
-    "Cadereyta Jiménez": { "lat": 25.59, "lng": -99.98 },
-    "Monterrey, Nuevo León": { "lat": 25.67, "lng": -100.31 },
-    "China, Nuevo León": { "lat": 25.70, "lng": -99.23 },
-    "Real de Catorce, San Luis Potosí": { "lat": 23.69, "lng": -100.89 },
-    "Aranzazú, Zacatecas": { "lat": 22.13, "lng": -101.87 },
-    "Zacatecas, Zacatecas": { "lat": 22.77, "lng": -102.57 },
-    "Malpaso, Zacatecas": { "lat": 22.65, "lng": -102.70 },
-    "Aguascalientes, Aguascalientes": { "lat": 21.88, "lng": -102.29 },
-    "Trancoso, Zacatecas": { "lat": 22.73, "lng": -102.37 }
+    "General Terán": {
+      "lat": 25.25,
+      "lng": -99.68
+    },
+    "Cadereyta Jiménez": {
+      "lat": 25.59,
+      "lng": -99.98
+    },
+    "Monterrey, Nuevo León": {
+      "lat": 25.67,
+      "lng": -100.31
+    },
+    "China, Nuevo León": {
+      "lat": 25.7,
+      "lng": -99.23
+    },
+    "Real de Catorce, San Luis Potosí": {
+      "lat": 23.69,
+      "lng": -100.89
+    },
+    "Aranzazú, Zacatecas": {
+      "lat": 22.13,
+      "lng": -101.87
+    },
+    "Zacatecas, Zacatecas": {
+      "lat": 22.77,
+      "lng": -102.57
+    },
+    "Malpaso, Zacatecas": {
+      "lat": 22.65,
+      "lng": -102.7
+    },
+    "Aguascalientes, Aguascalientes": {
+      "lat": 21.88,
+      "lng": -102.29
+    },
+    "Trancoso, Zacatecas": {
+      "lat": 22.73,
+      "lng": -102.37
+    }
   },
   "meta": {
     "title": "Genealogía Familia Burnes",
-    "dateRange": { "min": 1757, "max": 2023 },
-    "lastUpdated": "2026-02-07"
+    "dateRange": {
+      "min": 1757,
+      "max": 2023
+    },
+    "lastUpdated": "2026-02-25"
   }
 }
